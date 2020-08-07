@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a92ea1d3-d5b6-4dfc-bd1b-b719a6d029a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/extend-shallow/node_modules/is-extendable/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/extend-shallow/node_modules/is-extendable/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/extend-shallow/node_modules/is-extendable/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/extend-shallow/node_modules/is-extendable/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/extend-shallow/node_modules/is-extendable/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mixin-deep/node_modules/is-extendable/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mixin-deep/node_modules/is-extendable/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mixin-deep/node_modules/is-extendable/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mixin-deep/node_modules/is-extendable/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/mixin-deep/node_modules/is-extendable/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.debug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/array-set.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/base64-vlq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/base64.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/binary-search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/mapping-list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/quick-sort.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/source-map-consumer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/source-map-generator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/source-node.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/source-map.js" beforeDir="false" />
-    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,10 +48,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596566295347</updated>
-      <workItem from="1596566296400" duration="3621000" />
-      <workItem from="1596644981035" duration="646000" />
-      <workItem from="1596645827888" duration="11000" />
-      <workItem from="1596645839894" duration="1714000" />
     </task>
     <servers />
   </component>
