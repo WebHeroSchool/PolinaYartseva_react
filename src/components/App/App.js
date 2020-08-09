@@ -8,13 +8,16 @@ import './fonts/fonts.css';
 const App = () => {
     const items = [
         {
-            value: 'Выполнить дз №19'
+            value: 'Выполнить дз №19',
+            isDone: true
         },
         {
-            value: 'Выполнить дз №20'
+            value: 'Выполнить дз №20',
+            isDone: true
         },
         {
-            value: 'Прослушать вебинар'
+            value: 'Прослушать вебинар',
+            isDone: false
         }
     ];
     return (
