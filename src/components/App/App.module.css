@@ -3,20 +3,21 @@
   width: 300px;
 }
 
-.wrap__title {
+.title {
   font-family: Oswald, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 25px;
 }
 
-.item-list__item {
+.itemList {
   font-family: Oswald, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 18px;
 }
 
-.footer__text {
+.input {
   font-family: Oswald, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 300;
+  font-size: 18px;
+  border: solid 1px red;
 }
