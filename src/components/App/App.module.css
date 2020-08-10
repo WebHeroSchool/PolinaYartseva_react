@@ -1,23 +1,20 @@
 .wrap {
-  margin: auto;
-  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  width: 500px;
+  height: 75vh;
+  overflow: auto;
+  border: 1px solid #000;
+  border-radius: 30px;
+  padding: 25px;
 }
 
 .title {
   font-family: Oswald, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 25px;
-}
-
-.itemList {
-  font-family: Oswald, Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-}
-
-.input {
-  font-family: Oswald, Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-  border: solid 1px red;
+  font-size: 30px;
+  text-transform: uppercase;
 }

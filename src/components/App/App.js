@@ -22,10 +22,10 @@ const App = () => {
     ];
     return (
     <div className={styles.wrap}>
-        <h1 className={styles.title}>Важные дела:</h1>
-        <InputItem className={styles.input} />
-        <ItemList items={items} className={styles.itemList} />
-        <Footer count={1} className={styles.footer} />
+        <h1 className={styles.title}>список дел</h1>
+        <InputItem />
+        <ItemList items={items} />
+        <Footer count={1} />
     </div>);
 }
 
