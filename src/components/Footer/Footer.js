@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-const Footer = ({ count, }) => (<div>
+const Footer = ({ count }) => (<div>
     <p className={styles.total}>незавершенных дел: {count}</p>
     <div className={styles.tabs}>
         <Tabs
@@ -17,6 +17,7 @@ const Footer = ({ count, }) => (<div>
             <Tab label="Завершенные" />
         </Tabs>
     </div>
+
 </div>);
 
 export default Footer;

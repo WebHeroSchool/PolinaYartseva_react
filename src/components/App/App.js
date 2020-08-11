@@ -49,7 +49,7 @@ class App extends React.Component {
                 <ItemList items={this.state.items} onClickDone={this.onClickDone} />
                 <Footer count={this.state.count} onClickFooter={this.onClickFooter} />
             </div>);
-    }
+  }
 }
 
 export default App;
