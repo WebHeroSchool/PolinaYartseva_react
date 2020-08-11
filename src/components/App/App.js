@@ -10,30 +10,36 @@ class App extends React.Component {
         items: [
             {
                 value: 'Выполнить дз №19',
-                isDone: true
+                isDone: false,
+                id: 1
             },
             {
                 value: 'Выполнить дз №20',
-                isDone: true
+                isDone: false,
+                id: 2
             },
             {
                 value: 'Прослушать вебинар',
-                isDone: false
+                isDone: true,
+                id: 3
             }
-        ]
+        ],
+        count: 6
     };
 
-    onClickDone = isDone => console.log(isDone);
+    onClickDone = id => {
+        const newItemList = this.state.items.map(item => {
+            const newItem = { ...item };
 
-    // constructor(props) {
-    //     super(props);
-    //
-    //     this.onClickDone = this.onClickDone.bind(this);
-    // }
-    //
-    // onClickDone(isDone) {
-    //     console.log(isDone);
-    // }
+            if (item.id === id) {
+                newItem.isDone = !item.isDone;
+            }
+
+            return newItem;
+        });
+
+        this.setState( {items: newItemList });
+    };
 
     render() {
         return (
@@ -41,9 +47,9 @@ class App extends React.Component {
                 <h1 className={styles.title}>список дел</h1>
                 <InputItem />
                 <ItemList items={this.state.items} onClickDone={this.onClickDone} />
-                <Footer count={1} />
+                <Footer count={this.state.count} onClickFooter={this.onClickFooter} />
             </div>);
     }
-};
+}
 
 export default App;
