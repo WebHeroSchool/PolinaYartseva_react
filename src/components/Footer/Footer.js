@@ -17,6 +17,7 @@ const Footer = ({ count }) => (<div>
             <Tab label="Завершенные" />
         </Tabs>
     </div>
-    </div>);
+
+</div>);
 
 export default Footer;

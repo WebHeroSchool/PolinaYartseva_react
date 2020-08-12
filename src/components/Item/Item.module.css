@@ -8,3 +8,9 @@
   text-decoration: line-through;
   color: #454545;
 }
+
+.delete {
+  position: relative;
+  float: right;
+  top: 8px;
+}
