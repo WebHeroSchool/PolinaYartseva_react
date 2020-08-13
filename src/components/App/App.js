@@ -9,22 +9,22 @@ class App extends React.Component {
     state = {
         items: [
             {
-                value: 'Выполнить дз №19',
+                value: null,
                 isDone: false,
                 id: 1
-            },
-            {
-                value: 'Выполнить дз №20',
-                isDone: false,
-                id: 2
-            },
-            {
-                value: 'Прослушать вебинар',
-                isDone: true,
-                id: 3
             }
+            // {
+            //     value: 'Выполнить дз №20',
+            //     isDone: false,
+            //     id: 2
+            // },
+            // {
+            //     value: 'Прослушать вебинар',
+            //     isDone: false,
+            //     id: 3
+            // }
         ],
-        count: 6
+        count: null
     };
 
     onClickDone = id => {
@@ -61,7 +61,7 @@ class App extends React.Component {
                 <h1 className={styles.title}>список дел</h1>
                 <InputItem onClickAdd={this.onClickAdd} />
                 <ItemList items={this.state.items}  onClickDone={this.onClickDone} onClickDelete={this.onClickDelete}/>
-                <Footer count={this.state.count} onClickFooter={this.onClickFooter} />
+                <Footer count={this.state.count} />
             </div>);
   }
 }
