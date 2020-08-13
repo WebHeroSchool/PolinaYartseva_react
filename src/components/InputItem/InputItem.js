@@ -5,19 +5,34 @@ import styles from './InputItem.module.css'
 
 class InputItem extends React.Component {
     state = {
-        inputValue: ''
+        inputValue: '',
+        errorMessage: '',
+        isError: false
     };
 
-    onButtonClick =() => {
-        this.setState({
-            inputValue: ''
-        });
+    onButtonClick = () => {
+        if (this.setState.inputValue !== '') {
+            this.setState({
+                inputValue: '',
+                errorMessage: '',
+                isError: false
+            });
+            this.props.onClickAdd(this.state.inputValue);
+        } else {
+            this.setState({
+                errorMessage: 'Ошибка. Введите дело',
+                isError: true
+            });
+        }
+    };
 
-        this.props.onClickAdd(this.state.inputValue);
-    }
+    changeToUppercase = event => {
+        this.setState({ inputValue: event.target.value.toUpperCase()});
+    };
 
     render() {
-        const { onClickAdd } = this.props;
+
+        //const { onClickAdd } = this.props;
 
         return (<div className={styles.input}>
                 <TextField
@@ -26,7 +41,7 @@ class InputItem extends React.Component {
                     margin="normal"
                     fullWidth
                     value={this.state.inputValue}
-                    onChange={event => this.setState({inputValue: event.target.value})}
+                    onChange={this.changeToUppercase}
                 />
                 <Button
                     variant="contained"
