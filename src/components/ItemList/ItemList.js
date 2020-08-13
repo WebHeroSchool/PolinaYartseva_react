@@ -1,6 +1,7 @@
 import React from "react";
 import Item from "../Item/Item";
 import styles from "../ItemList/ItemList.module.css";
+import PropTypes from "prop-types";
 
 const ItemList = ({ items, onClickDone, onClickDelete }) => (
     <ul className={styles.itemList}> {
@@ -19,6 +20,15 @@ ItemList.defaultProps={
     items: {
         value: "Важные дела отсутствуют"
     }
+};
+
+Item.propTypes = {
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    isDone: PropTypes.bool,
+    id: PropTypes.number
 };
 
 export default ItemList;
