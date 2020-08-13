@@ -14,3 +14,7 @@
   float: right;
   top: 8px;
 }
+
+.deleted {
+  display: none;
+}
