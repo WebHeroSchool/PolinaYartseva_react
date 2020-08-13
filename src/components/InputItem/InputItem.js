@@ -11,17 +11,17 @@ class InputItem extends React.Component {
     };
 
     onButtonClick = () => {
-        if (this.setState.inputValue !== '') {
+        if (this.state.inputValue !== '') {
             this.setState({
                 inputValue: '',
                 errorMessage: '',
-                isError: false
+                isError: false,
             });
             this.props.onClickAdd(this.state.inputValue);
         } else {
             this.setState({
                 errorMessage: 'Ошибка. Введите дело',
-                isError: true
+                isError: true,
             });
         }
     };
@@ -40,6 +40,7 @@ class InputItem extends React.Component {
                     id="margin-normal"
                     margin="normal"
                     fullWidth
+                    helperText={this.state.errorMessage}
                     value={this.state.inputValue}
                     onChange={this.changeToUppercase}
                 />
