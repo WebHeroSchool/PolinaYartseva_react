@@ -17,7 +17,10 @@ const Footer = ({ count }) => (<div>
             <Tab label="Завершенные" />
         </Tabs>
     </div>
-
 </div>);
+
+Footer.defaultProps ={
+    count: 0
+}
 
 export default Footer;
