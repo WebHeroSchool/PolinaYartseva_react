@@ -46,10 +46,9 @@ class InputItem extends React.Component {
                     value={this.state.inputValue}
                     onChange={this.changeToUppercase}
                 />
-                <Button
+                <Button className={styles.button}
                     variant="contained"
                     color="secondary"
-                    fullWidth
                     onClick={this.onButtonClick}
                 >
                     Добавить

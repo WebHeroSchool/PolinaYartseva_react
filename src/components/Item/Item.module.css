@@ -1,18 +1,13 @@
-.item {
-  font-family: Oswald, Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-}
-
 .done {
   text-decoration: line-through;
   color: #454545;
 }
 
 .delete {
-  position: relative;
-  float: right;
-  top: 8px;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+
 }
 
 .deleted {

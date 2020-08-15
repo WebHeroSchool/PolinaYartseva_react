@@ -8,8 +8,7 @@
   padding: 0;
 }
 
-.delete {
-  position: relative;
-  float: right;
-  top: 8px;
+.item {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
 }
