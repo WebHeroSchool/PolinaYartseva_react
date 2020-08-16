@@ -1,4 +1,7 @@
 .input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: Oswald, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 18px;
@@ -8,4 +11,5 @@
   display: flex;
   justify-content: center;
   width: 25%;
+  margin: 0 auto;
 }
