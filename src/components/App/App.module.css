@@ -23,14 +23,17 @@
 }
 
 .link {
+  display: inline-block;
+  width: 100%;
   text-decoration: none;
   color: black;
   text-transform: uppercase;
   font-family: Oswald, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   list-style: none;
+  border: none;
 }
 
 .sidebar {

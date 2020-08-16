@@ -16,7 +16,7 @@ class Item extends React.Component {
 
     render() {
         const { value, isDone, onClickDone, onClickDelete, id } = this.props;
-        return (<div>
+        return (<div className={styles.item}>
             <div>
                 <Checkbox
                 checked={Item.isDone}
@@ -24,17 +24,15 @@ class Item extends React.Component {
                 />
             </div>
             <div className={classnames({
-                [styles.item]: true,
-                [styles.done]: isDone
+                [styles.item_true]: true,
+                [styles.item_done]: isDone
             })
             }>
             {value}
             </div>
-            <div className={styles.delete}>
-                <DeleteOutlinedIcon
-                    onClick={() => onClickDelete(id)}
-                />
-            </div>
+            <DeleteOutlinedIcon
+                onClick={() => onClickDelete(id)}
+            />
         </div>
         )
     }

@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 
 const ItemList = ({ items, onClickDone, onClickDelete }) => (
     <ul className={styles.itemList}> {
-        items.map(item => <li key={item.value}>
-            <Item className={styles.item}
+        items.map(item => <li key={item.value} className={styles.itemList__item}>
+            <Item
                 value={item.value}
                 isDone={item.isDone}
                 id={item.id}
