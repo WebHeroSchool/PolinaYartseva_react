@@ -8,13 +8,7 @@ import styles from './Todo.module.css';
 
 const Todo = () => {
     const initialState = {
-        items: [
-            {
-                value: null,
-                isDone: false,
-                id: null
-            }
-        ]
+        items: []
     };
 
     useEffect(() => {

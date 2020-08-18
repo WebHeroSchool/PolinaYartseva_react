@@ -16,23 +16,23 @@ class Item extends React.Component {
 
     render() {
         const { value, isDone, onClickDone, onClickDelete, id } = this.props;
-        return (<div>
-            <Checkbox
+        return (<div className={styles.item}>
+            <div>
+                <Checkbox
                 checked={Item.isDone}
                 onClick={() => onClickDone(id)}
-            />
-            <span className={classnames({
-                [styles.item]: true,
-                [styles.done]: isDone
+                />
+            </div>
+            <div className={classnames({
+                [styles.item_true]: true,
+                [styles.item_done]: isDone
             })
             }>
             {value}
-            </span>
-            <div className={styles.delete}>
-                <DeleteOutlinedIcon
-                    onClick={() => onClickDelete(id)}
-                />
             </div>
+            <DeleteOutlinedIcon
+                onClick={() => onClickDelete(id)}
+            />
         </div>
         )
     }

@@ -6,7 +6,7 @@ import Tab from '@material-ui/core/Tab';
 
 const Footer = ({ count }) => (<div>
     <p className={styles.total}>незавершенных дел: {count}</p>
-    <div className={styles.tabs}>
+    <div>
         <Tabs
             indicatorColor="primary"
             textColor="primary"

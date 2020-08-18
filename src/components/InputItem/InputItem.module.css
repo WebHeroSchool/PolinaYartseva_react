@@ -1,4 +1,8 @@
 .input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: Oswald, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 18px;
@@ -7,5 +11,6 @@
 .button {
   display: flex;
   justify-content: center;
-  width: 25%;
+  align-items: center;
+  width: 30%;
 }

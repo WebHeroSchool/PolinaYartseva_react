@@ -1,13 +1,26 @@
-.done {
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding-top: 10px;
+}
+
+.item_done {
   text-decoration: line-through;
   color: #454545;
+}
+
+
+.item_true {
+  display: flex;
+  flex: 1;
 }
 
 .delete {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-
 }
 
 .deleted {

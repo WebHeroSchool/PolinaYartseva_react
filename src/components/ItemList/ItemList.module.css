@@ -1,14 +1,15 @@
 .itemList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: Oswald, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 18px;
   list-style-type: none;
-  text-align: left;
-  width: 80%;
-  padding: 0;
 }
 
-.item {
-  display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
+.itemList__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
