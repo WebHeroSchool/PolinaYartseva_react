@@ -13,9 +13,9 @@ const Footer = ({ count }) => (<div>
             variant="fullWidth"
             aria-label="full width tabs example"
         >
-            <Tab label="Все" />
-            <Tab label="Незавершенные" />
-            <Tab label="Завершенные" />
+            <Tab label="all" />
+            <Tab label="in progress" />
+            <Tab label="done" />
         </Tabs>
     </div>
 </div>);

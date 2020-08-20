@@ -1,5 +1,11 @@
 .wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 20px;
+  width: 100%;
 }
 
 .preloader {
@@ -16,25 +22,34 @@
   margin-bottom: 15px;
 }
 
-.repo {
+.content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+  flex-direction: row;
+  align-items: center;
 }
 
-.login {
-  font-family: Oswald, Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 25px;
-  margin-bottom: 15px;
+.content_photo {
+  width: 35%;
 }
 
 .user_avatar {
-  width: 40%;
-  height: 40%;
+  width: 75%;
+  height: 75%;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.user_decr,
+.user_bio,
+.user_id,
+.user_login,
+.url,
+.repo_name {
+  font-size: 20px;
+  font-family: Oswald, Helvetica, sans-serif;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 .repo_list {
@@ -42,13 +57,7 @@
   font-family: Oswald, Helvetica, sans-serif;
   font-weight: 300;
   margin-bottom: 10px;
-}
-
-.repo_name {
-  font-size: 25px;
-  font-family: Oswald, Helvetica, sans-serif;
-  font-weight: 300;
-  margin-bottom: 10px;
+  margin-top: 15px;
 }
 
 .error {

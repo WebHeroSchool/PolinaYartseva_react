@@ -22,7 +22,7 @@ class About extends React.Component {
                     repoList: data,
                     isLoading: false
                 });
-            }) .catch(error => {
+            }).catch(error => {
                 this.setState({
                     isLoading: false,
                     isError: true,
@@ -36,7 +36,7 @@ class About extends React.Component {
                 user: data,
                 isLoading: false
             });
-        }) .catch(error => {
+        }).catch(error => {
                 this.setState({
                     isLoading: false,
                     isError: true,
@@ -46,29 +46,31 @@ class About extends React.Component {
         };
 
     render() {
-        const { isLoading, isError, errorMessage, repoList, user } = this.state;
-        return <div className={styles.wrap}>
+        const { isLoading, repoList, user } = this.state;
+        return (<div className={styles.wrap}>
             {isLoading ? <CircularProgress className={styles.preloader}/> :
-                <div>
-                    <h1 className={styles.title}>Обо мне</h1>
-                    {isError ? 'Ошибка получения данных с сервера:' + errorMessage :
-                        <div className={styles.repo}>
-                            <div>
-                                <p className={styles.login}>Логин: {user.login}</p>
-                                <img src={user.avatar_url} alt='Фото пользователя' className={styles.user_avatar} />
-                            </div>
-                            <div>
-                                <p className={styles.repo_list}>Мои репозитории:</p>
-                                    {repoList.map(repo => (<p key={repo.id}>
-                                            <a href={repo.id} className={styles.repo_name}>{repo.name}</a>
-                                        </p>
-                                    ))}
-                                </div>
+
+                    <h1 className={styles.title}>about me</h1>}
+                    <div className={styles.content}>
+                        <div className={styles.content_photo}>
+                            <img src={user.avatar_url} alt='User' className={styles.user_avatar} />
                         </div>
-                    }
-                </div>
-            }
-        </div>
+                        <div className={styles.content_links}>
+                            <p className={styles.user_decr}>My name is Polina Yartseva and I'm frontend developer</p>
+                            <p className={styles.user_bio}>{user.bio}</p>
+                            <p className={styles.user_id}>GitHub ID: {user.id}</p>
+                            <p className={styles.user_login}>GitHub login: {user.login}</p>
+                            <p className={styles.url}>GitHub url: <a href={user.html_url}>{user.html_url}</a></p>
+                        </div>
+                    </div>
+                    <div>
+                        <p className={styles.repo_list}>My repositories:</p>
+                        {repoList.map(repo => (<p key={repo.name}>
+                                <a href={repo.name} className={styles.repo_name}>{repo.name}</a>
+                        </p>
+                        ))}
+                    </div>
+        </div>)
     }
 }
 

@@ -20,9 +20,14 @@ class InputItem extends React.Component {
                 isError: false,
             });
             this.props.onClickAdd(this.state.inputValue);
+        } else if (this.state.items.find(item => this.props.inputValue === item.inputValue)) {
+            this.setState({
+                errorMessage: 'Error. This todo is already exist',
+                isError: true,
+            });
         } else {
             this.setState({
-                errorMessage: 'Ошибка. Введите дело',
+                errorMessage: 'Error. Input todo',
                 isError: true,
             });
         }

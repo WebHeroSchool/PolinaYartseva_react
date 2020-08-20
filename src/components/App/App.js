@@ -8,16 +8,17 @@ import Contacts from "../Contacts/Contacts";
 
 import styles from './App.module.css';
 import './fonts/fonts.css';
+import './Img/background5.jpg';
 
 const App = () =>
     (<Router>
         <div className={styles.wrap}>
-            <Card className={styles.sidebar}>
-                <ul className={styles.menu}>
-                    <Link to='/about'><li className={styles.link}>Обо мне</li></Link>
-                    <Link to='/todo'><li className={styles.link}>Дела</li></Link>
-                    <Link to='/contacts'><li className={styles.link}>Контакты</li></Link>
-                </ul>
+            <Card className={styles.header}>
+                <nav className={styles.menu}>
+                    <Link to='/about'><a className={styles.link}>about</a></Link>
+                    <Link to='/todo'><a className={styles.link}>todo-app</a></Link>
+                    <Link to='/contacts'><a className={styles.link}>contacts</a></Link>
+                </nav>
             </Card>
 
             <Card className={styles.content}>
