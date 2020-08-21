@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-const Footer = ({ count }) => (<div>
-    <p className={styles.total}>незавершенных дел: {count}</p>
+const Footer = ({ count }) => (<div className={styles.footer}>
+    <p className={styles.total}>pending todos: {count}</p>
     <div>
-        <Tabs
+        <Tabs className={styles.tabs}
             indicatorColor="primary"
             textColor="primary"
             variant="fullWidth"

@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   width: 100%;
 }
 
@@ -28,9 +28,9 @@
   align-items: center;
 }
 
-.content_photo {
-  width: 35%;
-}
+/*.content_photo {*/
+/*  width: 35%;*/
+/*}*/
 
 .user_avatar {
   width: 75%;
@@ -62,4 +62,38 @@
 
 .error {
   color: red;
+}
+
+@media (max-width: 1080px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .user_avatar {
+    width: 60%;
+    height: 60%;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: 25px;
+  }
+  .user_decr,
+  .user_bio,
+  .user_id,
+  .user_login,
+  .url,
+  .repo_name {
+    font-size: 15px;
+  }
+  .repo_list {
+    font-size: 20px;
+  }
+  .user_avatar {
+    width: 50%;
+    height: 50%;
+  }
 }

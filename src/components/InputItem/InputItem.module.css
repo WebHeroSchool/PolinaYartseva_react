@@ -14,3 +14,26 @@
   align-items: center;
   width: 30%;
 }
+
+@media (max-width: 1080px) {
+  .input {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .button {
+    width: 30%;
+  }
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: 25px;
+  }
+  .input {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .button {
+    width: 30%;
+  }
+}

@@ -3,13 +3,13 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import styles from './InputItem.module.css'
 import PropTypes from "prop-types";
-import Item from "../Item/Item";
 
 class InputItem extends React.Component {
     state = {
         inputValue: '',
         errorMessage: '',
-        isError: false
+        isError: false,
+        items: []
     };
 
     onButtonClick = () => {
@@ -20,7 +20,7 @@ class InputItem extends React.Component {
                 isError: false,
             });
             this.props.onClickAdd(this.state.inputValue);
-        } else if (this.state.items.find(item => this.props.inputValue === item.inputValue)) {
+        } else if (this.state.items.find(item => this.state.inputValue === item.inputValue)) {
             this.setState({
                 errorMessage: 'Error. This todo is already exist',
                 isError: true,
@@ -56,7 +56,7 @@ class InputItem extends React.Component {
                     color="secondary"
                     onClick={this.onButtonClick}
                 >
-                    Добавить
+                    add
                 </Button>
             </div>);
     }

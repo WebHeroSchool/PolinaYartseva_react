@@ -8,26 +8,31 @@ import styles from './Todo.module.css';
 
 const Todo = () => {
     const initialState = {
+        newItemList: JSON.parse(localStorage.getItem("todoItems")) || [],
+        filter: 'all',
+        count: JSON.parse(localStorage.getItem("count")) || 0,
         items: []
     };
-
-    useEffect(() => {
-        console.log('componentDidMount');
-    }, []);
-
-    useEffect(() => {
-        console.log('componentDidUpdate');
-    });
 
     const [items, setItems] = useState(initialState.items);
     const [count, setCount] = useState(initialState.count);
     const [filter, setFilter] = useState(initialState.filter);
+
+    useEffect(() => {
+        localStorage.setItem("items", JSON.stringify(items));
+        localStorage.setItem("count", JSON.stringify(count));
+    }, [items,count]);
 
     const onClickDone = id => {
         const newItemList = items.map(item => {
             const newItem = { ...item };
             if (item.id === id) {
                 newItem.isDone = !item.isDone;
+                if (newItem.done){
+                    setCount(count -1)
+                } else {
+                    setCount(count +1)
+                }
             }
 
             return newItem;
@@ -36,18 +41,11 @@ const Todo = () => {
         setItems(newItemList);
     };
 
-    const onClickDelete = id => {
-        const newItemList = items.filter(item => item.id !== id);
-
-        setItems(newItemList);
-        setCount((count) => count + 1);
-    };
-
     const onClickAdd = value => {
         const newItemList = [
             ...items,
             {
-                value,
+                value: value,
                 isDone: false,
                 id: items.length + 1
             }
@@ -56,42 +54,34 @@ const Todo = () => {
         setCount((count) => count + 1);
     };
 
-    const filterItems = (items, filter) => {
-        if (filter === 'all') {
-            return items;
-        } else if (filter === 'active') {
-            return items.filter((item) => (!item.isDone));
-        } else if (filter === 'done') {
-            return items.filter((item) => item.isDone);
+
+    const onClickDelete = (id, done) => {
+        const newItemList = items.filter(item => item.id !== id);
+        if(done === false){
+            setCount(count -1)
+        }
+        setItems(newItemList);
+    };
+
+    const filterItems = () => {
+        if (filter === 'active'){
+            return items.filter(item => !item.done);
+        } else if (filter === 'done'){
+            return items.filter(item => item.done);
         }
         return items;
     };
 
-    const onFilterChange = (filter) => {
-        setFilter(filter);
+    const changeFilter = (filter) => {
+        setFilter(filter)
     };
-
-    const searchItem = (todoItem) => {
-        let res = todoItem.filter(item=>!item.isDone);
-        return res.length;
-    };
-
-    const addItemToLocalStorage = (item, count) => {
-        let sItem = JSON.stringify(item);
-        localStorage.setItem("todoItem", sItem);
-        localStorage.setItem("count", JSON.stringify(count));
-    };
-
-    addItemToLocalStorage (items, count);
-    const visibleItems = filterItems(items, filter);
-    let activeItem = searchItem(items);
 
     return (
         <div>
-            <h1 className={styles.title}>список дел</h1>
-            <InputItem onClickAdd={onClickAdd} />
-            <ItemList items={items}  onClickDone={onClickDone} onClickDelete={onClickDelete}/>
-            <Footer count={items.length} onFilterChange={onFilterChange} />
+            <h1 className={styles.title}>todo list</h1>
+            <InputItem onClickAdd={onClickAdd} items={items} />
+            <ItemList items={items} onClickDone={onClickDone} onClickDelete={onClickDelete} filterItems={filterItems} />
+            <Footer count={items.length} filter={filter} changeFilter={changeFilter} />
         </div>
     );
 };
