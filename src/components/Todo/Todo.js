@@ -54,34 +54,33 @@ const Todo = () => {
         setCount((count) => count + 1);
     };
 
-
     const onClickDelete = (id, done) => {
-        const newItemList = items.filter(item => item.id !== id);
-        if(done === false){
-            setCount(count -1)
-        }
-        setItems(newItemList);
+    const newItemList = items.filter(item => item.id !== id);
+    if(done === false){
+        setCount(count -1)
+    }
+    setItems(newItemList);
     };
 
-    const filterItems = () => {
-        if (filter === 'active'){
+    const filterItems = (filter) => {
+        if (filter === 'active') {
             return items.filter(item => !item.done);
-        } else if (filter === 'done'){
+        } if (filter === 'done'){
             return items.filter(item => item.done);
         }
         return items;
     };
 
-    const changeFilter = (filter) => {
-        setFilter(filter)
+    const changeFilter = (name) => {
+        setFilter(name)
     };
 
     return (
         <div>
             <h1 className={styles.title}>todo list</h1>
             <InputItem onClickAdd={onClickAdd} items={items} />
-            <ItemList items={items} onClickDone={onClickDone} onClickDelete={onClickDelete} filterItems={filterItems} />
-            <Footer count={items.length} filter={filter} changeFilter={changeFilter} />
+            <ItemList items={items} onClickDone={onClickDone} onClickDelete={onClickDelete} filter={filter} filterItems={filterItems} />
+            <Footer count={items.length} filter={filter} changeFilter={changeFilter} filterItems={filterItems} />
         </div>
     );
 };
