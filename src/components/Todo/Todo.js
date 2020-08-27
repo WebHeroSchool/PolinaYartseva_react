@@ -79,7 +79,7 @@ const Todo = () => {
         <div>
             <h1 className={styles.title}>todo list</h1>
             <InputItem onClickAdd={onClickAdd} items={items} />
-            <ItemList items={items} onClickDone={onClickDone} onClickDelete={onClickDelete} filter={filter} filterItems={filterItems} />
+            <ItemList items={items} onClickDone={onClickDone} onClickDelete={onClickDelete} filter={filter} filterItems={filterItems} changeFilter={changeFilter}/>
             <Footer count={items.length} filter={filter} changeFilter={changeFilter} filterItems={filterItems} />
         </div>
     );

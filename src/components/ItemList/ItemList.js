@@ -2,8 +2,9 @@ import React from "react";
 import Item from "../Item/Item";
 import styles from "../ItemList/ItemList.module.css";
 import PropTypes from "prop-types";
+import Footer from "../Footer/Footer";
 
-const ItemList = ({ items, onClickDone, onClickDelete }) => (
+const ItemList = ({ items, filter, onClickDone, onClickDelete, changeFilter, filterItems }) => (
     <ul className={styles.itemList}> {
         items.map(item => <li key={item.value} className={styles.itemList__item}>
             <Item
@@ -11,7 +12,10 @@ const ItemList = ({ items, onClickDone, onClickDelete }) => (
                 isDone={item.isDone}
                 id={item.id}
                 onClickDone={onClickDone}
-                onClickDelete={onClickDelete} />
+                onClickDelete={onClickDelete}
+                filter={filter}
+                changeFilter={changeFilter}
+                filterItems={filterItems} />
             </li>)}
     </ul>
 );
