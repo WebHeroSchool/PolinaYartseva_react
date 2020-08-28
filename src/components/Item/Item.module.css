@@ -26,3 +26,11 @@
 .deleted {
   display: none;
 }
+
+.item_filtered-done {
+  display: flex;
+}
+
+.item_filtered-active {
+  display: flex;
+}

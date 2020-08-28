@@ -62,7 +62,7 @@ const Todo = () => {
     setItems(newItemList);
     };
 
-    const filterItems = (filter) => {
+    const filterItems = () => {
         if (filter === 'active') {
             return items.filter(item => !item.done);
         } if (filter === 'done'){
@@ -79,7 +79,7 @@ const Todo = () => {
         <div>
             <h1 className={styles.title}>todo list</h1>
             <InputItem onClickAdd={onClickAdd} items={items} />
-            <ItemList items={items} onClickDone={onClickDone} onClickDelete={onClickDelete} filter={filter} filterItems={filterItems} changeFilter={changeFilter}/>
+            <ItemList items={items} onClickDone={onClickDone} onClickDelete={onClickDelete} filter={filter} filterItems={filterItems} changeFilter={changeFilter} />
             <Footer count={items.length} filter={filter} changeFilter={changeFilter} filterItems={filterItems} />
         </div>
     );
