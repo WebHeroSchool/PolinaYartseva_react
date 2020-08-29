@@ -3,7 +3,7 @@ import Item from "../Item/Item";
 import styles from "../ItemList/ItemList.module.css";
 import PropTypes from "prop-types";
 
-const ItemList = ({ items, filter, onClickDone, onClickDelete, changeFilter, filterItems }) => (
+const ItemList = ({ onClickDone, onClickDelete, filterItems }) => (
     <ul className={styles.itemList}> {
         filterItems().map(item => <li key={item.value} className={styles.itemList__item}>
             <Item
@@ -12,9 +12,7 @@ const ItemList = ({ items, filter, onClickDone, onClickDelete, changeFilter, fil
                 id={item.id}
                 onClickDone={onClickDone}
                 onClickDelete={onClickDelete}
-                filter={filter}
-                changeFilter={changeFilter}
-                filterItems={filterItems} />
+            />
             </li>)}
     </ul>
 );

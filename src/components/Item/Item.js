@@ -6,28 +6,25 @@ import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 import styles from './Item.module.css';
 
 class Item extends React.Component {
-    debugger;
     render() {
-        const { value, isDone, onClickDone, onClickDelete, id, filter, changeFilter, filterItems } = this.props;
+        const { value, isDone, onClickDone, onClickDelete, id, } = this.props;
         return (<div className={styles.item}>
             <div>
                 <Checkbox
-                checked={Item.isDone}
+                checked={isDone}
                 onClick={() => onClickDone(id)}
-                filter={filter}
-                changeFilter={changeFilter}
-                filterItems={filterItems}
             />
             </div>
             <div className={classnames({
                 [styles.item_true]: true,
                 [styles.item_done]: isDone
                 })
-            } onClick={() => filterItems(filter)} >
+            }
+                >
             {value}
             </div>
             <DeleteOutlinedIcon
-                onClick={() => onClickDelete(id)}
+                onClick={() => onClickDelete(id, isDone)}
             />
         </div>
         )
@@ -42,7 +39,11 @@ Item.propTypes = {
     value: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
-    ])
+    ]),
+    isDone: PropTypes.bool,
+    id: PropTypes.number,
+    onClickDone: PropTypes.func,
+    onClickDelete: PropTypes.func
 };
 
 export default Item;

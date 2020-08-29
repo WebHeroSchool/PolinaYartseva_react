@@ -28,7 +28,7 @@ const Todo = () => {
             const newItem = { ...item };
             if (item.id === id) {
                 newItem.isDone = !item.isDone;
-                if (newItem.done){
+                if (newItem.isDone){
                     setCount(count -1)
                 } else {
                     setCount(count +1)
@@ -64,9 +64,9 @@ const Todo = () => {
 
     const filterItems = () => {
         if (filter === 'active') {
-            return items.filter(item => !item.done);
+            return items.filter(item => !item.isDone);
         } if (filter === 'done'){
-            return items.filter(item => item.done);
+            return items.filter(item => item.isDone);
         }
         return items;
     };
@@ -78,9 +78,18 @@ const Todo = () => {
     return (
         <div>
             <h1 className={styles.title}>todo list</h1>
-            <InputItem onClickAdd={onClickAdd} items={items} />
-            <ItemList items={items} onClickDone={onClickDone} onClickDelete={onClickDelete} filter={filter} filterItems={filterItems} changeFilter={changeFilter} />
-            <Footer count={items.length} filter={filter} changeFilter={changeFilter} filterItems={filterItems} />
+            <InputItem onClickAdd={onClickAdd}
+                       items={items} />
+            <ItemList items={items}
+                      onClickDone={onClickDone}
+                      onClickDelete={onClickDelete}
+                      filter={filter}
+                      filterItems={filterItems}
+                      changeFilter={changeFilter} />
+            <Footer count={items.length}
+                    filter={filter}
+                    changeFilter={changeFilter}
+                    filterItems={filterItems} />
         </div>
     );
 };

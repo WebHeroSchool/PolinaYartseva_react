@@ -28,9 +28,10 @@
   align-items: center;
 }
 
-/*.content_photo {*/
-/*  width: 35%;*/
-/*}*/
+.content_photo {
+  display: flex;
+  width: 35%;
+}
 
 .user_avatar {
   width: 75%;
@@ -52,12 +53,35 @@
   text-align: left;
 }
 
+.repo_name {
+  margin-right: 20px;
+}
+.content_repo {
+  width: 100%;
+}
+
+.repo_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .repo_list {
   font-size: 25px;
   font-family: Oswald, Helvetica, sans-serif;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   margin-top: 15px;
+}
+
+.repo_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
 }
 
 .error {

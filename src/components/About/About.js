@@ -63,12 +63,15 @@ class About extends React.Component {
                             <p className={styles.url}>GitHub url: <a href={user.html_url}>{user.html_url}</a></p>
                         </div>
                     </div>
-                    <div>
+                    <div className={styles.content_repo}>
                         <p className={styles.repo_list}>My repositories:</p>
-                        {repoList.map(repo => (<p key={repo.name}>
+                        <div className={styles.repo_links}>
+                            {repoList.map(repo => (<div className={styles.repo_item} key={repo.name}>
                                 <a href={repo.name} className={styles.repo_name}>{repo.name}</a>
-                        </p>
-                        ))}
+                                <p className={styles.repo_name}>{repo.description}</p>
+                            </div>
+                            ))}
+                        </div>
                     </div>
         </div>)
     }
