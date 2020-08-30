@@ -30,6 +30,7 @@
 
 .content_photo {
   display: flex;
+  justify-content: center;
   width: 35%;
 }
 
@@ -57,12 +58,12 @@
   margin-right: 20px;
 }
 .content_repo {
-  width: 100%;
+  width: 75%;
 }
 
 .repo_links {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
