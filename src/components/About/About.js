@@ -46,8 +46,15 @@ class About extends React.Component {
         };
 
     render() {
-        const { isLoading, repoList, user } = this.state;
+        const { isLoading, repoList, user, isError, errorMessage } = this.state;
         return (<div className={styles.wrap}>
+            {isError ?
+                <div className={styles.error}>
+                    <h2>Упс... произошла ошибка</h2>
+                    <span className={styles.error_text}>{ errorMessage.message}</span>
+                    <span className={styles.error_num}>{ errorMessage.status}</span>
+                </div>
+                : <>
             {isLoading ? <CircularProgress className={styles.preloader}/> :
 
                     <h1 className={styles.title}>about me</h1>}
@@ -73,6 +80,7 @@ class About extends React.Component {
                             ))}
                         </div>
                     </div>
+                </>}
         </div>)
     }
 }

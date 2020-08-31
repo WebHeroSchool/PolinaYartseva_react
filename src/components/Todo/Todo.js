@@ -27,7 +27,7 @@ const Todo = () => {
         const newItemList = items.map(item => {
             const newItem = { ...item };
             if (item.id === id) {
-                newItem.isDone = !item.isDone;
+                newItem.isDone = !newItem.isDone;
                 if (newItem.isDone){
                     setCount(count -1)
                 } else {
@@ -86,7 +86,7 @@ const Todo = () => {
                       filter={filter}
                       filterItems={filterItems}
                       changeFilter={changeFilter} />
-            <Footer count={items.length}
+            <Footer count={count}
                     filter={filter}
                     changeFilter={changeFilter}
                     filterItems={filterItems} />
