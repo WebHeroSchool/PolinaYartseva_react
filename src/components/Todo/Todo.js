@@ -81,7 +81,19 @@ const Todo = () => {
 
     const clearAll = () => {
         setItems([]);
+        setCount(0);
     };
+
+    useEffect(() => {
+        localStorage.setItem("count", JSON.stringify(count));
+    }, [count]);
+
+    // const addItemToLocalStorage = (item, count) => {
+    // localStorage.setItem("items", JSON.stringify(item));
+    // localStorage.setItem("count", JSON.stringify(count));
+    // };
+    //
+    // addItemToLocalStorage (items, count);
 
     return (
         <div>
